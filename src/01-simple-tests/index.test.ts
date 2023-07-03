@@ -7,9 +7,9 @@ describe('simpleCalculator tests', () => {
     const result = simpleCalculator({
       a: 1,
       b: 2,
-      action: Action.Add
-    })
-    expect(result).toBe(3)
+      action: Action.Add,
+    });
+    expect(result).toBe(3);
   });
 
   test('should subtract two numbers', () => {
@@ -17,9 +17,9 @@ describe('simpleCalculator tests', () => {
     const result = simpleCalculator({
       a: 5,
       b: 3,
-      action: Action.Subtract
-    })
-    expect(result).toBe(2)
+      action: Action.Subtract,
+    });
+    expect(result).toBe(2);
   });
 
   test('should multiply two numbers', () => {
@@ -27,9 +27,9 @@ describe('simpleCalculator tests', () => {
     const result = simpleCalculator({
       a: 5,
       b: 2,
-      action: Action.Multiply
-    })
-    expect(result).toBe(10)
+      action: Action.Multiply,
+    });
+    expect(result).toBe(10);
   });
 
   test('should divide two numbers', () => {
@@ -37,9 +37,9 @@ describe('simpleCalculator tests', () => {
     const result = simpleCalculator({
       a: 20,
       b: 4,
-      action: Action.Divide
-    })
-    expect(result).toBe(5)
+      action: Action.Divide,
+    });
+    expect(result).toBe(5);
   });
 
   test('should exponentiate two numbers', () => {
@@ -47,9 +47,9 @@ describe('simpleCalculator tests', () => {
     const result = simpleCalculator({
       a: 4,
       b: 2,
-      action: Action.Exponentiate
-    })
-    expect(result).toBe(16)
+      action: Action.Exponentiate,
+    });
+    expect(result).toBe(16);
   });
 
   test('should return null for invalid action', () => {
@@ -57,9 +57,9 @@ describe('simpleCalculator tests', () => {
     const result = simpleCalculator({
       a: 4,
       b: 2,
-      action: "INVALID"
-    })
-    expect(result).toBeNull()
+      action: 'INVALID',
+    });
+    expect(result).toBeNull();
   });
 
   test('should return null for invalid arguments', () => {
@@ -67,8 +67,8 @@ describe('simpleCalculator tests', () => {
     const result = simpleCalculator({
       a: 'INVALID',
       b: false,
-      action: Action.Multiply
-    })
-    expect(result).toBeNull()
+      action: Action.Multiply,
+    });
+    expect(result).toBeNull();
   });
 });
